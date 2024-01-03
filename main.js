@@ -127,12 +127,15 @@ function timeCounter ()
   lvlT.innerHTML = time;
   let interval = setInterval( () =>
   {
-
     lvlT.innerHTML--;
     if ( lvlT.innerHTML == 0 )
     {
-
+      console.log( 'as' );
       clearInterval( interval );
+      gameOver();
+    }
+    else 
+    {
       if ( userIn.value.trim().toLowerCase() === word.innerHTML.toLowerCase().trim() )
       {
         if ( words.length > 0 )
@@ -142,15 +145,7 @@ function timeCounter ()
           // create score counter
           score.innerHTML++;
           timeCounter();
-        } else
-        {
-          score.innerHTML++;
-          gameOver();
         }
-        ;
-      } else
-      {
-        gameOver();
       }
     }
   }, 1000 );
