@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="writing Speed Test Game">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+    rel="stylesheet">
+  <title>Typing Game</title>
+</head>
+
+<body>
+  <div class="nav-container">
+    <div class="nav-bar">
+      <h1>Typing Speed Test Game</h1>
+    </div>
+  </div>
+  <div class="content">
+    <div class="writing-game">
+      <div class="levels">
+        <p data-lvl="easy">easy: <span class="time"></span>s</p>
+        <p data-lvl="medium">medium: <span class="time"></span>s</p>
+        <p data-lvl="hard">hard: <span class="time"></span>s</p>
+      </div>
+      <div class="layout"></div>
+      <div class="pop-up">
+        <h1>Game Over</h1>
+        <div class="score">
+          <p>Score</p>
+          <span class="player-score">50</span>
+        </div>
+        <div class="user-info">
+          <p>name</p>
+          <input type="text" id="player-name" maxlength="10">
+        </div>
+        <input type="submit" class="sub">
+      </div>
+      <div class="main">
+        <div class="left">
+          <div class="best-score">
+            <h1>Score</h1>
+            <div>
+              <p>name</p>
+              <p>score</p>
+              <p>rank</p>
+            </div>
+            <hr>
+            <ol class="list">
+            </ol>
+          </div>
+        </div>
+        <div class="mid">
+          <div class="word">
+            <span>The word</span>
+            <p>word</p>
+          </div>
+          <div class="user-input">
+            <p>Input</p>
+            <input type="text" id="input" title="text" autocomplete="off">
+          </div>
+          <button class="start">Start</button>
+        </div>
+        <div class="right">
+          <div class="score">
+            <p>time </p>
+            <span id="time"></span>
+          </div>
+          <div class="score counter">
+            <p>score </p>
+            <span id="score">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
