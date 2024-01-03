@@ -138,6 +138,7 @@ function timeCounter ()
     {
       if ( userIn.value.trim().toLowerCase() === word.innerHTML.toLowerCase().trim() )
       {
+        clearInterval( interval );
         if ( words.length > 0 )
         {
           randomWord();
